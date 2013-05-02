@@ -1,3 +1,11 @@
 .metadata/
 ejemplosGroovy/target-eclipse/*
 ejemplosGroovy/target/*
+ClientesDecorator/target/*
+ClientesDecorator/target-eclipse/*
+Servers/
+ClientesDecorator/web-app/*
+ClientesDecorator/grails-app/i18n/*
+ClientesDecorator/.settings/*
+
+
