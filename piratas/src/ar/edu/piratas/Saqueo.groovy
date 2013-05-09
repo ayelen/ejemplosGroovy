@@ -7,8 +7,7 @@ class Saqueo {
 	def monedasASaquear
 	
 	def puedeSerCompletadaPor(unBarco){
-		(super.puedeSerCompletadaPor(unBarco)
-		&& 	unBarco.tripulacion.every{unPirata -> unPirata.monedas <= monedasASaquear })
+		unBarco.tripulacion.every{unPirata -> unPirata.monedas <= monedasASaquear }
 	}
 
 }

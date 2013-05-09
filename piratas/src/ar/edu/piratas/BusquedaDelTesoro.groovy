@@ -5,12 +5,10 @@ package ar.edu.piratas
 class BusquedaDelTesoro{
 	
 	
-	def puedeSerCompletadaPor(unBarco){
-		(super.puedeSerCompletadaPor(unBarco) 
-		&&	unBarco.tripulacion.every{ (it.monedas <= 5) && it.items.containsAny(['grogXD','brujula','mapa'])
-			
-			}
-		)
+	def puedeSerCompletadaPor(Barco unBarco){
+		unBarco.tripulacion.every{ pirata -> 
+			(pirata.monedas <= 5) && pirata.items.any{item -> ['grogXD','brujula','mapa'].contains(item)}}
+		
 	}
 
 }
