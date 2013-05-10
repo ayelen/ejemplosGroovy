@@ -1,10 +1,10 @@
 package ar.edu.piratas
 
 
-@Mixin(Mision)
-class ConvertirseEnLeyenda {
+
+class ConvertirseEnLeyenda extends Mision{
 	
-	def puedeSerCompletadaPor(unBarco){
+	def condicionMisionConcreta(def unBarco){
 		 unBarco.tripulacion.items.length() >=10
 	}
 }

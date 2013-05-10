@@ -1,12 +1,12 @@
 package ar.edu.piratas
 
 
-@Mixin(Mision)
-class Saqueo {
+
+class Saqueo extends Mision{
 	
 	def monedasASaquear
 	
-	def puedeSerCompletadaPor(unBarco){
+	def condicionMisionConcreta(def unBarco){
 		unBarco.tripulacion.every{unPirata -> unPirata.monedas <= monedasASaquear }
 	}
 

@@ -1,11 +1,11 @@
 package ar.edu.piratas
 
 
-@Mixin(Mision)
-class BusquedaDelTesoro{
+
+class BusquedaDelTesoro extends Mision{
 	
 	
-	def puedeSerCompletadaPor(Barco unBarco){
+	def condicionMisionConcreta(def unBarco){
 		unBarco.tripulacion.every{ pirata -> 
 			(pirata.monedas <= 5) && pirata.items.any{item -> ['grogXD','brujula','mapa'].contains(item)}}
 		
